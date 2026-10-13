@@ -1,7 +1,7 @@
 import type { NextFunction, Request, Response } from "express";
 
 const ALLOWED_ORIGINS = new Set([
-  "https://floboard.netlify.app",
+  "https://floboard-netlify.netlify.app",
   "http://localhost:3000",
   "http://127.0.0.1:3000",
   "http://localhost:4173",

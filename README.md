@@ -1,6 +1,6 @@
 # FloBoard
 
-**[Open the live web version →](https://floboard.netlify.app/)**
+**[Open the live web version →](https://floboard-netlify.netlify.app/)**
 
 FloBoard is a mobile/web financial markets dashboard built with React Native + Expo, backed by an
 Express API server that pulls live data from Yahoo Finance. This repo is a pnpm workspace
@@ -125,7 +125,7 @@ The web app is now deployed to Netlify, so the store listing should point at the
 hosted on that site:
 
 ```
-https://floboard.netlify.app/
+https://floboard-netlify.netlify.app/
 ```
 
 The old copy of the policy that shipped with the GitHub Pages `docs/` folder is no longer in the
