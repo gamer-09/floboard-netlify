@@ -1,6 +1,6 @@
 # FloBoard
 
-**[Open the live web version →](https://gamer-09.github.io/floboard/)**
+**[Open the live web version →](https://floboard.netlify.app/)**
 
 FloBoard is a mobile/web financial markets dashboard built with React Native + Expo, backed by an
 Express API server that pulls live data from Yahoo Finance. This repo is a pnpm workspace
@@ -121,11 +121,15 @@ not a place for a long-running Node server).
 ## Privacy policy
 
 App Store Connect and Google Play Console both require a publicly hosted privacy policy URL.
-It's published to GitHub Pages from the `docs/` folder by `.github/workflows/pages.yml`:
+The web app is now deployed to Netlify, so the store listing should point at the policy page
+hosted on that site:
 
 ```
-https://gamer-09.github.io/floboard/privacy-policy.html
+https://floboard.netlify.app/
 ```
+
+The old copy of the policy that shipped with the GitHub Pages `docs/` folder is no longer in the
+repo — keep the policy page with whatever host you publish it from.
 
 ## Tests
 

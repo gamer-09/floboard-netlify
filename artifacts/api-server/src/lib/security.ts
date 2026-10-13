@@ -1,7 +1,7 @@
 import type { NextFunction, Request, Response } from "express";
 
 const ALLOWED_ORIGINS = new Set([
-  "https://gamer-09.github.io",
+  "https://floboard.netlify.app",
   "http://localhost:3000",
   "http://127.0.0.1:3000",
   "http://localhost:4173",
@@ -14,7 +14,7 @@ export function isAllowedOrigin(origin: string | undefined): boolean {
   try {
     const u = new URL(origin);
     if (u.protocol === "http:" && (u.hostname === "localhost" || u.hostname === "127.0.0.1")) return true;
-    if (u.protocol === "https:" && (u.hostname.endsWith(".github.io") || u.hostname.endsWith(".onrender.com"))) return true;
+    if (u.protocol === "https:" && (u.hostname.endsWith(".netlify.app") || u.hostname.endsWith(".onrender.com"))) return true;
   } catch {
     return false;
   }

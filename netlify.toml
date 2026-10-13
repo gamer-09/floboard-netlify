@@ -1,0 +1,6 @@
+# Netlify deployment (replaces the former GitHub Pages workflow).
+# The web client lives in web/ and is built with Vite into web/dist.
+[build]
+  base = "web"
+  command = "npm ci && npm run build"
+  publish = "dist"
