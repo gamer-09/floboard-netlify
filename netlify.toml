@@ -4,3 +4,12 @@
   base = "web"
   command = "npm ci && npm run build"
   publish = "dist"
+
+# The Render API keeps running as-is: its CORS allow-list only knows the old
+# GitHub Pages origin, so the browser calls /api/* on our own origin and this
+# proxies to Render. Same origin in the browser means no CORS grant is needed.
+[[redirects]]
+  from = "/api/*"
+  to = "https://floboard-api.onrender.com/api/:splat"
+  status = 200
+  force = true

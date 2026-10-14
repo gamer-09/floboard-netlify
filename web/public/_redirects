@@ -1,0 +1,6 @@
+# The Render API keeps running as-is; its CORS allow-list only knows the old
+# GitHub Pages origin, so the browser calls /api/* on our own origin and Netlify
+# proxies it to Render. Same origin in the browser means no CORS grant is needed.
+# Kept in sync with the [[redirects]] block in the repo-root netlify.toml, which
+# only applies when Netlify runs the build itself.
+/api/*  https://floboard-api.onrender.com/api/:splat  200

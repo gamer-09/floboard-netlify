@@ -118,6 +118,14 @@ not a place for a long-running Node server).
    `EXPO_PUBLIC_API_URL` at the deployed URL. If your Render URL differs, update it there and in
    the `!__DEV__` fallback in `artifacts/floboard/utils/apiBase.ts`.
 
+### How the web build reaches the API
+
+The Netlify deployment serves the API on its own origin: `netlify.toml` and
+`web/public/_redirects` both proxy `/api/*` to `https://floboard-api.onrender.com`, and
+`web/src/utils/apiBase.ts` uses that same-origin path in production builds. Every browser request
+stays same-origin, so the API server's CORS allow-list doesn't need to name the Netlify site. The
+Render service is unchanged and still serves the Expo app directly.
+
 ## Privacy policy
 
 App Store Connect and Google Play Console both require a publicly hosted privacy policy URL.
